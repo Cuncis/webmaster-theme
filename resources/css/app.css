@@ -1,0 +1,21 @@
+@import "tailwindcss" theme(static);
+@source "../../app/**/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+/* Primary nav links — WP outputs these via wp_nav_menu(), not Blade */
+@layer components {
+  .nav>li>a {
+    @apply block rounded-md px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900;
+  }
+
+  .nav>li.current-menu-item>a,
+  .nav>li.current-page-ancestor>a {
+    @apply bg-gray-100 text-gray-900;
+  }
+
+  /* Mobile nav links get more vertical padding */
+  #nav-mobile .nav>li>a {
+    @apply px-3 py-2.5;
+  }
+}
