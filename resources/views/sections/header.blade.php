@@ -4,7 +4,7 @@
     <div class="flex h-16 items-center justify-between lg:h-20">
 
       {{-- Brand --}}
-      <a class="brand flex shrink-0 items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900 transition-opacity hover:opacity-80"
+      <a class="brand flex shrink-0 items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900 no-underline transition-opacity hover:opacity-80"
         href="{{ home_url('/') }}">
         @if (has_custom_logo())
           {!! get_custom_logo() !!}
