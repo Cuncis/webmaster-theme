@@ -158,18 +158,33 @@ add_action('admin_menu', function () {
 add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h4 class="mb-3 text-sm font-semibold uppercase tracking-widest text-gray-400">',
+        'after_title'   => '</h4>',
     ];
 
     register_sidebar([
         'name' => __('Primary', 'sage'),
-        'id' => 'sidebar-primary',
+        'id'   => 'sidebar-primary',
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
+        'name' => __('Footer Column 1', 'sage'),
+        'id'   => 'footer-col-1',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer Column 2', 'sage'),
+        'id'   => 'footer-col-2',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer Column 3', 'sage'),
+        'id'   => 'footer-col-3',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer Column 4', 'sage'),
+        'id'   => 'footer-col-4',
     ] + $config);
 });
