@@ -4,12 +4,12 @@ import laravel from 'laravel-vite-plugin'
 import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
 
 // Set APP_URL if it doesn't exist for Laravel Vite plugin
-if (! process.env.APP_URL) {
-  process.env.APP_URL = 'http://example.test';
+if (!process.env.APP_URL) {
+  process.env.APP_URL = 'https://store.libradigital.id';
 }
 
 export default defineConfig({
-  base: '/app/themes/sage/public/build/',
+  base: '/wp-content/themes/webmaster-theme/public/build/',
   plugins: [
     tailwindcss(),
     laravel({

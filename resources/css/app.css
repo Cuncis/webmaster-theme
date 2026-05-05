@@ -1,4 +1,5 @@
 @import "tailwindcss" theme(static);
+@plugin "@tailwindcss/typography";
 @source "../../app/**/*.php";
 @source "../**/*.blade.php";
 @source "../**/*.js";
@@ -17,5 +18,14 @@
   /* Mobile nav links get more vertical padding */
   #nav-mobile .nav>li>a {
     @apply px-3 py-2.5;
+  }
+
+  /* WP posts navigation */
+  .nav-links {
+    @apply flex items-center gap-4 text-sm font-medium;
+  }
+
+  .nav-links a {
+    @apply rounded-lg border border-gray-200 bg-white px-4 py-2 text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-indigo-600;
   }
 }
