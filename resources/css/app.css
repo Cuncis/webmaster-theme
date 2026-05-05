@@ -4,6 +4,17 @@
 @source "../**/*.blade.php";
 @source "../**/*.js";
 
+@layer base {
+  a {
+    @apply no-underline;
+  }
+
+  /* Override typography plugin which re-adds underlines inside .prose */
+  .prose a {
+    text-decoration: none;
+  }
+}
+
 /* Primary nav links — WP outputs these via wp_nav_menu(), not Blade */
 @layer components {
   .nav>li>a {
